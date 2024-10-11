@@ -1,0 +1,92 @@
+body {
+  font-family: 'Monoid', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('img/bgwaspmold0.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #333;
+}
+
+#main {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#mushroom-container {
+  margin-bottom: 20px;
+}
+
+#mushroom {
+  font-size: 24px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+#controls {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#controls.show {
+  display: flex;
+}
+
+#begin, #next, #next-set, #mushroom-btn, #lichen-btn {
+  padding: 10px 20px;
+  background-color: #28A745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#begin:hover, #next:hover, #next-set:hover, #mushroom-btn:hover, #lichen-btn:hover {
+  background-color: #218838;
+}
+
+.hide {
+  display: none;
+}
+
+.correct {
+  background-color: #28a745;
+  color: white;
+}
+
+.incorrect {
+  background-color: #dc3545;
+  color: white;
+}
+.mushroom-image {
+  object-fit: contain;
+}
