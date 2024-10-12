@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const beginButton = document.getElementById('begin');
 const nextButton = document.getElementById('next');
-const nextSetButton = document.getElementById('next-set')
+const restartButton = document.getElementById('restart')
 const mushroomContainerElement = document.getElementById('mushroom-container');
 const mushroomElement = document.getElementById('mushroom');
 const answerButtonsElement = document.getElementById('answer-buttons');
@@ -583,8 +583,8 @@ let score = 0;
 mushroomButton.classList.add('hide');
 lichenButton.classList.add('hide');
 beginButton.addEventListener('click', choice);
-nextSetButton.addEventListener('click', choice);
-nextSetButton.classList.add('hide');
+restartButton.addEventListener('click', choice);
+restartButton.classList.add('hide');
 
 function choice() {
   beginButton.classList.add('hide');
@@ -651,7 +651,7 @@ function setNextMushroom() {
 
 function resetState() {
   clearStatusClass(document.body);
-  //nextButton.classList.add('hide');
+  nextButton.classList.add('hide');
   while (answerButtonsElement.firstChild) {
       answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
@@ -704,7 +704,7 @@ function pauseMycoMem() {
   resultsElement.classList.remove('hide');
   resultsElement.innerHTML = `
       <h2><font color="ffffff"><center>Accuracy: ${score} out of ${shuffledMushrooms.length}</p></center></h2>
-      <center><button onclick="restartMycoMem()">Restart</button> or you can go to the <button onclick="setTwo()">Next Set</button></center> or you can <button onclick="window.close()">Exit</button></center>`;
+      <center><button onclick="restartMycoMem()">Choose Set</button><form><button type="submit" formaction="https://www.github.com/sixie6e">Exit</button></form></center>`;
 }
 
 function restartMycoMem() {
