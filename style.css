@@ -61,7 +61,7 @@ body {
   display: flex;
 }
 
-#begin, #next, #next-set, #mushroom-btn, #lichen-btn {
+#begin, #next, #restart, #mushroom-btn, #lichen-btn {
   padding: 10px 20px;
   background-color: #28A745;
   color: white;
@@ -70,7 +70,7 @@ body {
   cursor: pointer;
 }
 
-#begin:hover, #next:hover, #next-set:hover, #mushroom-btn:hover, #lichen-btn:hover {
+#begin:hover, #next:hover, #restart:hover, #mushroom-btn:hover, #lichen-btn:hover {
   background-color: #218838;
 }
 
