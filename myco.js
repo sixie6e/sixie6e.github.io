@@ -1,7 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-  nextButton.classList.add('hide');
-});
-
 const beginButton = document.getElementById('begin');
 const nextButton = document.getElementById('next');
 const restartButton = document.getElementById('restart')
@@ -11,6 +7,7 @@ const answerButtonsElement = document.getElementById('answer-buttons');
 const resultsElement = document.getElementById('results');
 const mushroomButton = document.getElementById('mushroom-btn');
 const lichenButton = document.getElementById('lichen-btn');
+nextButton.classList.add('hide');
 
 const mhs = new Image(200,200);
 mhs.src = 'img/manyheadedslime.jpg';
