@@ -1,6 +1,5 @@
 const beginButton = document.getElementById('begin');
 const nextButton = document.getElementById('next');
-const nextSetButton = document.getElementById('next-set');
 const restartButton = document.getElementById('restart')
 const mushroomContainerElement = document.getElementById('mushroom-container');
 const mushroomElement = document.getElementById('mushroom');
@@ -9,7 +8,6 @@ const resultsElement = document.getElementById('results');
 const mushroomButton = document.getElementById('mushroom-btn');
 const lichenButton = document.getElementById('lichen-btn');
 nextButton.classList.add('hide');
-nextSetButton.classList.add('hide');
 
 const mhs = new Image(200,200);
 mhs.src = 'img/manyheadedslime.jpg';
