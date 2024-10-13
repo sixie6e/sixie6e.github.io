@@ -9,7 +9,7 @@ body {
   background-image: url('img/bgwaspmold0.png');
   background-repeat: no-repeat;
   background-size: cover;
-  color: #333;
+  color: #333333;
 }
 
 #main {
@@ -17,7 +17,7 @@ body {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -40,7 +40,7 @@ body {
 
 .button {
   padding: 10px 15px;
-  background-color: #007BFF;
+  background-color: #00aaaa;
   color: white;
   border: none;
   border-radius: 5px;
@@ -49,7 +49,7 @@ body {
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: #0055aa;
 }
 
 #controls {
@@ -63,7 +63,7 @@ body {
 
 #begin, #next, #restart, #mushroom-btn, #lichen-btn {
   padding: 10px 20px;
-  background-color: #28A745;
+  background-color: #00aa00;
   color: white;
   border: none;
   border-radius: 5px;
@@ -71,7 +71,7 @@ body {
 }
 
 #begin:hover, #next:hover, #restart:hover, #mushroom-btn:hover, #lichen-btn:hover {
-  background-color: #218838;
+  background-color: #00dd00;
 }
 
 .hide {
@@ -79,12 +79,12 @@ body {
 }
 
 .correct {
-  background-color: #28a745;
+  background-color: #00aa00;
   color: white;
 }
 
 .incorrect {
-  background-color: #dc3545;
+  background-color: #aa0000;
   color: white;
 }
 .mushroom-image {
