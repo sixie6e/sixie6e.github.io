@@ -669,12 +669,8 @@ function selectAnswer(selectedButton) {
   setTimeout(() => {
       if (shuffledMushrooms.length > currentMushroomIndex + 1) {
           nextButton.classList.remove('hide');
-      } else {
-          pauseMycoMem();
       }
-      if (shuffledLichen.length > currentLichenIndex + 1) {
-          nextButton.classList.remove('hide');
-      } else {
+      else {
           pauseMycoMem();
       }
   }, 50);
