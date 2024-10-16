@@ -60,7 +60,6 @@ reindeer.src = 'img/reindeer.png';
 const cylpow = new Image(200,200);
 cylpow.src = 'img/cylpow.png';
 
-
 const enada = new Image(200,200);
 enada.src = 'img/enada.png';
 const cl = new Image(200,200);
@@ -155,10 +154,10 @@ const lichen = [
 	{
 		mushroom: images[4],
 		answers: [ 
-			{ text: 'Lesser Sulphur Cup', correct: true },
-			{ text: 'Cup of Sulphur', correct: false },
-			{ text: 'Sulphur Sprouts', correct: false },
-			{ text: 'Lesser Sulphur Shoots', correct: false },
+			{ text: 'Cylindrical Powderhorn', correct: true },
+			{ text: 'Sulphur Stalks', correct: false },
+			{ text: 'Sulphur Powderhorn', correct: false },
+			{ text: 'Common Powder Stalks', correct: false },
 		]
 	},
 	{
@@ -335,16 +334,15 @@ const lichen = [
 	{
 		mushroom: images[24],
 		answers: [ 
-			{ text: 'Cylindrical Powderhorn', correct: true },
-			{ text: 'Sulphur Stalks', correct: false },
-			{ text: 'Sulphur Powderhorn', correct: false },
-			{ text: 'Common Powder Stalks', correct: false },
+			{ text: 'Lesser Sulphur Cup', correct: true },
+			{ text: 'Cup of Sulphur', correct: false },
+			{ text: 'Sulphur Sprouts', correct: false },
+			{ text: 'Lesser Sulphur Shoots', correct: false },
 		]
 	},
 ]
 	
 const mushrooms = [	
-
 	{
 		mushroom: images1[0],
 		answers: [
@@ -636,6 +634,7 @@ function clearStatusClass(element) {
   element.classList.remove('correct');
   element.classList.remove('incorrect');
 }
+
 nextButton.addEventListener('click', () => {
   currentMushroomIndex++;
   setNextMushroom();
