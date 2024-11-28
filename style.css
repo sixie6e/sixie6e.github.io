@@ -1,92 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Monoid', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
-  background-image: url('img/tableau1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #333333;
 }
 
 #main {
-  width: 90%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 20;
+  background: #111111;
+  -webkit-transition: -webkit-transform .6s ease;
+  transition: -webkit-transform .6s ease;
+  transition: transform .6s ease;
+  transition: transform .6s ease, -webkit-transform .6s ease;
+}
+@media (min-width: 640px) {
+  #main {
+    padding: 1em;
+  }
 }
 
-#mushroom-container {
-  margin-bottom: 20px;
+.fake-section {
+  background: #111111;
+  height: 300px;
 }
 
-#mushroom {
-  font-size: 24px;
-  margin-bottom: 10px;
-  align-items: center;
+.tiles-a {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.tiles-a ul {
+  margin: 0;
+  padding: 0;
+}
+.tiles-a li {
+  list-style: none;
+}
+@media (min-width: 640px) {
+  .tiles-a li {
+    float: left;
+    width: 33.33%;
+  }
+}
+.tiles-a a {
+  margin: 1em;
+  display: block;
+  background: #222;
+  padding-top: 73%;
+  height: 0;
 }
 
-.btn-grid {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  gap: 10px;
+#aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: #eee;
+  overflow-y: scroll;
+  z-index: 10;
+}
+#aside img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+#aside .wrapper {
+  padding: 1em;
+}
+#aside .close {
+  width: 25px;
+  display: block;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
 }
 
-.button {
-  padding: 10px 15px;
-  background-color: #00aaaa;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.show-detail {
+  overflow: hidden;
+}
+.show-detail #main {
+  -webkit-transform: translateX(-60%);
+          transform: translateX(-60%);
 }
 
-.button:hover {
-  background-color: #0055aa;
-}
-
-#controls {
-  justify-content: center;
-  margin-top: 20px;
-}
-
-#controls.show {
-  display: flex;
-}
-
-#begin, #next, #restart, #mushroom-btn, #lichen-btn {
-  padding: 10px 20px;
-  background-color: #00aa00;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#begin:hover, #next:hover, #restart:hover, #mushroom-btn:hover, #lichen-btn:hover {
-  background-color: #00dd00;
-}
-
-.hide {
-  display: none;
-}
-
-.correct {
-  background-color: #00aa00;
-  color: white;
-}
-
-.incorrect {
-  background-color: #aa0000;
-  color: white;
-}
-.mushroom-image {
-  object-fit: contain;
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
