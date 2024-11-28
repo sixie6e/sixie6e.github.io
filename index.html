@@ -1,31 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
-	<title>{Myco-Memory}</title>
-	<meta charset="UTF-8" />
-	<meta name="viewport" 
-    content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="style.css" />
+	<meta charset="UTF-8">
+	<title>Species Observations</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-	<div id="main">
-		<h1><center>{Myco-Memory}</center></h1>
-		<center> <div id="mushroom-container">
-		<div id="mushroom"><center>{Lichens, Fungi, and Slime Molds}</center></div>
-		<div id="answer-buttons" class="btn-grid"></div>
-		</div></center>
+	<main role="main" id="main">
+		<section class="tiles-a">
+			<ul>
+				<li>
+					<a href="#" style="background: url('img/ladderlichen.png'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+					<div class="details visually-hidden">
+						<img src="img/ladderlichen.png" alt="Cladonia cervicornis ssp. verticillata">
+						<div class="text-copy wrapper">
+							<h3>Cladonia cervicornis ssp. verticillata</h3>
+							<p>Cladonia cervicornis ssp. verticillata, also known as ladder lichen, is a cup lichen that is similar to Cladonia cervicornis but has distinct features. Color: Cladonia verticillata is a paler green-grey color, while Cladonia cervicornis is browner. Podetia: Cladonia verticillata has podetia with cups that are arranged in tiers, often stacked in scaffolds of two or three. Cladonia cervicornis has fewer podetions and never multi-storey. Basal squamules Cladonia verticillata has rounded and short basal squamules. Cladonia cervicornis has longer, more indented basal squamules. Habitat: Cladonia verticillata is found in more acidic and damper habitats than Cladonia cervicornis. It is typically found on sandy soil in aerohaline healthlands. Cladonia species are economically important to reindeer-herders and some species can be used to create antibiotic cream.</p>
+						</div>
+					</div>
+				</a>
+			</li>
+			
+			<li>
+				<a href="#" style="background: url('img/ucyclo.png'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+					<div class="details visually-hidden">
+						<img src="img/ucyclo.png" alt="Urceolus cyclostomus">
+						<div class="text-copy wrapper">
+							<h3>Urceolus cyclostomus</h3>
+							<p>Urceolus cyclostomus is a species of flagellate, a single-celled protist that exhibits an emergent flagellum for movement.Members of the genus Urceolus are distinguished by the presence of a 'neck' at the anterior end of their oval-shaped cell, followed by a wide aperture or 'mouth' into a deep canal where the feeding groove and the flagellum originate. In addition, like other euglenids, the cell surface or pellicle is spiral-striped. In particular, U. cyclostomus is distinguished from other species of the genus by its more or less rigid and regular body shape, a less developed 'ingestive organelle' or feeding apparatus, and a more conspicuous 'hatching' (i.e. more pronounced stripes) of the pellicle. The posterior end of the cell is narrow, as is common in other euglenids. The cells are ovate, measuring 14–30 μm long and 4–18 μm wide. The cells move by crawling through the substrate, with the posterior end raised. The flagellum is around 1.5 times longer than the cell itself, 40–50 μm. </p>
+						</div>
+					</div>
+				</a>
+			</li>
+			
+			<li>
+				<a href="#" style="background: url('img/gomphonemaa.png'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+					<div class="details visually-hidden">
+						<img src="img/gomphonemaa.png" alt="Gomphonema acuminatum ">
+						<div class="text-copy wrapper">
+							<h3>Gomphonema acuminatum </h3>
+							Valves clavate, tumid at the center with two constrictions along the margin; at the headpole the valve is broad and then becomes apiculate at the headpole, the footpole is rounded. The axial area is narrow, straight, until broadening to form an irregular central area. The raphe is lateral and undulate.
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</section>
+</main>
+
+<aside role="complementary" id="aside" aria-hidden="true" aria-expanded="false">
+	<a href="#" class="close"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/close-white-thin.svg" alt="Close button"><span class="visually-hidden">Close</span></a>
+	<div class="aside--details" tabindex="0" aria-live="polite" aria-atomic="true" aria-label="Species details">
 	</div>
-	<div id="controls">
-		<center><button id="begin">Begin</button>
-		<button id="next">Next</button>
-		<button id="restart">Choose Set</button>
-		<button id="mushroom-btn">Mushrooms</button>
-		<button id="lichen-btn">Lichen</button>
-		</center>
-	</div>
-	<div id="results">
-	</div>
-</div>
-<script src="myco.js"></script>
+</aside>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/toggleAria.js'></script>
+<script src="js/index.js"></script>
 </body>
 </html>
