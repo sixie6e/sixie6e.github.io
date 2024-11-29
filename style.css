@@ -6,6 +6,11 @@ body {
   margin: 0;
 }
 
+.top {
+	background-color: #111111;
+	color: #cccccc;
+}
+
 #main {
   position: relative;
   z-index: 20;
