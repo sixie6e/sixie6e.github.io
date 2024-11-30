@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Species Observations {Bacteria} </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h4>Click for species description:</h4>
+	<main role="main" id="main">
+		<section class="tiles-a">
+			<ul>
+			<li>
+				<a href="#" style="background: url('img/empty.png'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+					<div class="details visually-hidden">
+						<img src="img/empty.png" alt="Genus sp.">
+						<div class="text-copy wrapper">
+							<h3>Genus Sp.</h3>
+							<p><b>Genus Sp.</b>: Description</p>
+							<p><b>Kingdom:</b> Bacteria</p>
+							<p><b>Phylum:</b> empty</p>
+							<p><b>Class:</b> empty</p>
+							<p><b>Order:</b> empty</p>
+							<p><b>Family:</b> empty</p>
+						</div>
+					</div>
+				</a>
+			</li>
+
+		</ul>
+	</section>
+</main>
+
+<aside role="complementary" id="aside" aria-hidden="true" aria-expanded="false">
+	<a href="#" class="close"><img src="img/close-white-thin.svg" alt="Close button"><span class="visually-hidden">Close</span></a>
+	<div class="aside--details" tabindex="0" aria-live="polite" aria-atomic="true" aria-label="Species details">
+	</div>
+</aside>
+
+<script src="jquery.min.js"></script>
+<script src="toggleAria.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
