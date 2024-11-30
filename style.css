@@ -6,11 +6,6 @@ body {
   margin: 0;
 }
 
-#top {
-	background-color: #111111;
-	color: #cccccc;
-}
-
 #main {
   position: relative;
   z-index: 20;
@@ -20,6 +15,7 @@ body {
   transition: transform .6s ease;
   transition: transform .6s ease, -webkit-transform .6s ease;
 }
+
 @media (min-width: 640px) {
   #main {
     padding: 1em;
@@ -43,6 +39,7 @@ body {
 .tiles-a li {
   list-style: none;
 }
+
 @media (min-width: 640px) {
   .tiles-a li {
     float: left;
@@ -52,7 +49,7 @@ body {
 .tiles-a a {
   margin: 1em;
   display: block;
-  background: #222;
+  background: #222222;
   padding-top: 73%;
   height: 0;
 }
@@ -63,18 +60,21 @@ body {
   right: 0;
   width: 60%;
   height: 100%;
-  background: #eee;
+  background: #eeeeee;
   overflow-y: scroll;
   z-index: 10;
 }
+
 #aside img {
   width: 100%;
   height: auto;
   vertical-align: top;
 }
+
 #aside .wrapper {
   padding: 1em;
 }
+
 #aside .close {
   width: 25px;
   display: block;
@@ -88,6 +88,7 @@ body {
 .show-detail {
   overflow: hidden;
 }
+
 .show-detail #main {
   -webkit-transform: translateX(-60%);
           transform: translateX(-60%);
@@ -103,3 +104,77 @@ body {
   padding: 0;
   border: 0;
 }
+
+#body0 {
+  font-family: 'Monoid', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('img/pinnulariabg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #333333;
+}
+
+#species-container {
+  margin-bottom: 20px;
+}
+
+#welcome {
+  font-size: 24px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+/*
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+}
+*/
+
+.button {
+  padding: 10px 15px;
+  background-color: #111111;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #333333;
+}
+
+#controls {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#controls.show {
+  display: flex;
+}
+
+#animalia-btn, #plantae-btn, #fungi-btn, #bacteria-btn, #chromista-btn, #protista-btn, #archaea-btn {
+  padding: 10px 20px;
+  background-color: #111111;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#animalia-btn:hover, #plantae-btn:hover, #fungi-btn:hover, #bacteria-btn:hover, #chromista-btn:hover, #protista-btn:hover, #archaea-btn:hover {
+  background-color: #333333;
+}
+
+.hide {
+  display: none;
+}
+
+
