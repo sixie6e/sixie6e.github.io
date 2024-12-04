@@ -160,7 +160,7 @@ body {
   display: flex;
 }
 
-#animalia-btn, #plantae-btn, #fungi-btn, #bacteria-btn, #chromista-btn, #protista-btn, #archaea-btn {
+#animalia-btn, #plantae-btn, #fungi-btn, #bacteria-btn, #chromista-btn, #protista-btn, #archaea-btn, #unknown-btn {
   padding: 10px 20px;
   background-color: #111111;
   color: white;
@@ -169,7 +169,7 @@ body {
   cursor: pointer;
 }
 
-#animalia-btn:hover, #plantae-btn:hover, #fungi-btn:hover, #bacteria-btn:hover, #chromista-btn:hover, #protista-btn:hover, #archaea-btn:hover {
+#animalia-btn:hover, #plantae-btn:hover, #fungi-btn:hover, #bacteria-btn:hover, #chromista-btn:hover, #protista-btn:hover, #archaea-btn:hover, #unknown-btn:hover {
   background-color: #333333;
 }
 
