@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-}
-
 #main {
   position: relative;
   z-index: 20;
@@ -22,31 +18,27 @@ body {
   }
 }
 
-.fake-section {
-  background: #111111;
-  height: 300px;
-}
-
-.tiles-a {
+.tiles {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-.tiles-a ul {
+.tiles ul {
   margin: 0;
   padding: 0;
 }
-.tiles-a li {
+.tiles li {
   list-style: none;
 }
 
 @media (min-width: 640px) {
-  .tiles-a li {
+  .tiles li {
     float: left;
     width: 33.33%;
   }
+
 }
-.tiles-a a {
+.tiles a {
   margin: 1em;
   display: block;
   background: #222222;
@@ -105,37 +97,9 @@ body {
   border: 0;
 }
 
-#body0 {
-  font-family: 'Monoid', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-image: url('img/pinnulariabg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #333333;
-}
-
 #species-container {
   margin-bottom: 20px;
 }
-
-#welcome {
-  font-size: 24px;
-  margin-bottom: 10px;
-  align-items: center;
-}
-
-/*
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  gap: 10px;
-}
-*/
 
 .button {
   padding: 10px 15px;
@@ -176,3 +140,6 @@ body {
 .hide {
   display: none;
 }
+
+
+
