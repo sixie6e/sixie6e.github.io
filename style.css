@@ -97,6 +97,20 @@
   border: 0;
 }
 
+#body {
+  font-family: 'Monoid', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('img/pinnulariabg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #333333;
+}
+
 #species-container {
   margin-bottom: 20px;
 }
