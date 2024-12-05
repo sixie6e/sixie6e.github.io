@@ -105,10 +105,10 @@
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-image: url('img/pinnulariabg.jpg');
+  background-image: url('img/0.png');
   background-repeat: no-repeat;
   background-size: cover;
-  color: #333333;
+  color: #000000;
 }
 
 #species-container {
