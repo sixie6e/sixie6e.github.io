@@ -2,7 +2,7 @@ var $parent = $("#main"),
 	$aside = $("#aside"),
 	$asideTarget = $aside.find(".aside--details"),
 	$asideClose = $aside.find(".close"),
-	$tilesParent = $(".tiles-a"),
+	$tilesParent = $(".tiles"),
 	$tiles = $tilesParent.find("a"),
 	slideClass = "show-detail";
 	$tiles.on("click", function(e){
