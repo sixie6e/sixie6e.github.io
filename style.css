@@ -40,7 +40,6 @@ body {
     float: left;
     width: 33.33%;
   }
-
 }
 
 .tiles a {
@@ -120,7 +119,6 @@ body {
   margin-bottom: 20px;
 }
 
-
 .button {
   padding: 10px 15px;
   background-color: #111111;
@@ -160,6 +158,3 @@ body {
 .hide {
   display: none;
 }
-
-
-
