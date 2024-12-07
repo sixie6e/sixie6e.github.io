@@ -9,7 +9,7 @@ body {
 #main {
   position: relative;
   z-index: 20;
-  background: #111111;
+  background: #000000;
   -webkit-transition: -webkit-transform .6s ease;
   transition: -webkit-transform .6s ease;
   transition: transform .6s ease;
@@ -50,32 +50,8 @@ body {
   height: 0;
 }
 
-.videos {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-.videos ul {
-  margin: 0;
-  padding: 0;
-}
-.videos li {
-  list-style: none;
-}
-
-@media (min-width: 640px) {
-  .videos li {
-    float: left;
-    width: 33.33%;
-  }
-}
-
-.videos a {
-  margin: 1em;
-  display: block;
-  background: #222222;
-  padding-top: 73%;
-  height: 0;
+.tiles video {
+  padding: 2;
 }
 
 #aside {
@@ -187,4 +163,6 @@ body {
   display: none;
 }
 
-
+video[poster]{
+  padding: 1;
+}
