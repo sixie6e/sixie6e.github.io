@@ -187,5 +187,8 @@ body {
   display: none;
 }
 
+video[poster]{
+  width: 90%;
+}
 
 
