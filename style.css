@@ -33,6 +33,7 @@ body {
 }
 .tiles li {
   list-style: none;
+  color: #999999
 }
 
 @media (min-width: 640px) {
