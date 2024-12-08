@@ -9,176 +9,7 @@ body {
 #main {
   position: relative;
   z-index: 20;
-  background: #000000;* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-#main {
-  position: relative;
-  z-index: 20;
   background: #000000;
-  -webkit-transition: -webkit-transform .6s ease;
-  transition: -webkit-transform .6s ease;
-  transition: transform .6s ease;
-  transition: transform .6s ease, -webkit-transform .6s ease;
-}
-
-@media (min-width: 640px) {
-  #main {
-    padding: 1em;
-  }
-}
-
-.tiles {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-.tiles ul {
-  margin: 0;
-  padding: 0;
-}
-.tiles li {
-  list-style: none;
-  color: #999999
-}
-
-@media (min-width: 640px) {
-  .tiles li {
-    float: left;
-    width: 33.33%;
-  }
-}
-
-.tiles a {
-  margin: 1em;
-  display: block;
-  background: #222222;
-  padding-top: 73%;
-  height: 0;
-}
-
-.tiles video {
-  padding: 2;
-}
-
-#aside {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: #eeeeee;
-  overflow-y: scroll;
-  z-index: 10;
-}
-
-#aside img {
-  width: 100%;
-  height: auto;
-  vertical-align: top;
-}
-
-#aside .wrapper {
-  padding: 1em;
-}
-
-#aside .close {
-  width: 25px;
-  display: block;
-  position: absolute;
-  top: 1em;
-  right: 1em;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-}
-
-.show-detail {
-  overflow: hidden;
-}
-
-.show-detail #main {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-}
-
-#body {
-  font-family: 'Monoid', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-image: url('img/0.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #000000;
-}
-
-#species-container {
-  margin-bottom: 20px;
-}
-
-.button {
-  padding: 10px 15px;
-  background-color: #111111;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.button:hover {
-  background-color: #333333;
-}
-
-#controls {
-  justify-content: center;
-  margin-top: 20px;
-}
-
-#controls.show {
-  display: flex;
-}
-
-#animalia-btn, #plantae-btn, #fungi-btn, #bacteria-btn, #chromista-btn, #protista-btn, #archaea-btn, #unknown-btn, #video-btn {
-  padding: 10px 20px;
-  background-color: #111111;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#animalia-btn:hover, #plantae-btn:hover, #fungi-btn:hover, #bacteria-btn:hover, #chromista-btn:hover, #protista-btn:hover, #archaea-btn:hover, #unknown-btn:hover, #video-btn:hover {
-  background-color: #333333;
-}
-
-.hide {
-  display: none;
-}
-
-video[poster]{
-  padding: 1;
-}
-
   -webkit-transition: -webkit-transform .6s ease;
   transition: -webkit-transform .6s ease;
   transition: transform .6s ease;
@@ -236,6 +67,12 @@ video[poster]{
 }
 
 #aside img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+#aside video {
   width: 100%;
   height: auto;
   vertical-align: top;
