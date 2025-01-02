@@ -1,58 +1,76 @@
+import networkx as nx
+import matplotlib.pyplot as plt
+from matplotlib.widgets import Slider, Button
 import tkinter as tk
 
-class Equilibrium:
-    def __init__(self, x):
-        self.x = x
-        self.x.title("Equilibrium")
+class Species:
+    def __init__(self, name, dependencies=[]):
+        self.name = name
+        self.dependencies = dependencies
 
-        self.species = []
-        for i in range(16):
-            bar = tk.Canvas(x, width=50, height=250, bg="black")
-            bar.grid(row=0, column=i)
-            self.species.append(bar)
-        self.current_species = 0
-        self.initial_population = [50] * 16
-        self.update_species()
+def create_ecosystem(species_data):
+    ecosystem = {}
+    for name, dependencies in species_data:
+        ecosystem[name] = Species(name, dependencies)
+    return ecosystem
 
-    def update_species(self):
-        for i, bar in enumerate(self.species):
-            p = self.initial_population[i]
-            bar.delete("all") 
-            bar.create_rectangle(0, 100 - p, 50, 250, fill="green", width=0)
+def check_extinction_risk(ecosystem, extinct_species):
+    at_risk = []
+    for species_name, species in ecosystem.items():
+        if extinct_species in species.dependencies:
+            at_risk.append(species_name)
+    return at_risk
+  
+# need to populate this list with keystone species
+species_data = [
+    ("Bear", ["Salmon"]),
+    ("Salmon", ["Krill"]),
+    ("Krill", ["Copepods"]),
+    ("Copepods", ["Phytoplankton", "Zooplankton"]),
+    ("Most of the Animal Kingdom", ["Autotrophs"])
+]
 
-    def increase_population(self, event):
-        if self.initial_population[self.current_species] > 0:
-            self.initial_population[self.current_species] += 5
-            if self.current_species > 0:
-                self.initial_population[self.current_species + 1] -= 2
-            if self.current_species < len(self.species) + 1:
-                self.initial_population[self.current_species - 1] += 2
-            for i in range(len(self.species)):
-                self.initial_population[i] = max(0, min(self.initial_population[i], 100))
-            self.update_species()
-            
-    def decrease_population(self, event):
-        if self.initial_population[self.current_species] > 0:
-            self.initial_population[self.current_species] -= 5
-            if self.current_species > 0:
-                self.initial_population[self.current_species - 1] += 2
-            if self.current_species < len(self.species) - 1:
-                self.initial_population[self.current_species + 1] -= 2
-            for i in range(len(self.species)):
-                self.initial_population[i] = max(0, min(self.initial_population[i], 100))
-            self.update_species()
+def on_slider_change(event):
+    global sliders
+    slider_index = sliders.index(event.widget)
+    change = event.widget.get() - event.widget.prev_value
 
-    def next_species(self, event):
-        self.current_species = (self.current_species + 1) % len(self.species)
-    def prev_species(self, event):
-        self.current_species = (self.current_species - 1) % len(self.species)
+    if slider_index > 0:
+        sliders[slider_index - 1].set(sliders[slider_index - 1].get() - change)
+    if slider_index < len(sliders) - 1:
+        sliders[slider_index + 1].set(sliders[slider_index + 1].get() + change)
+        
+    event.widget.prev_value = event.widget.get()
 
-if __name__ == "__main__":
-    x = tk.Tk()
-    app = Equilibrium(x)
+window = tk.Tk()
+window.title("Equilibrium")
+canvas = tk.Canvas(window, width=300, height=70)
+canvas.pack()
+sliders = []
+for i in range(7):
+    slider = tk.Scale(window, from_=0, to=100000, orient=tk.HORIZONTAL, label=f"Species {i+1}", activebackground='green')
+    slider.pack()
+    slider.prev_value = 0
+    slider.bind("<B1-Motion>", on_slider_change)
+    sliders.append(slider)
 
-    x.bind("<Left>", app.prev_species)
-    x.bind("<Right>", app.next_species) 
-    x.bind("<Up>", app.increase_population)
-    x.bind("<Down>", app.decrease_population)
-    x.mainloop()
+sliders[0].set(15141)
+sliders[1].set(47867)
+sliders[2].set(17411)
+sliders[3].set(14)
+sliders[4].set(444)
+sliders[5].set(27271)
+sliders[6].set(45244)
+
+window.mainloop()
+
+ecosystem = create_ecosystem(species_data)
+extinct_species = "Autotrophs"  # need to change to take slider position data after adjustment
+at_risk = check_extinction_risk(ecosystem, extinct_species)
+
+if at_risk:
+    print(f"Extinction of {extinct_species} could lead to extinction of:")
+    for species in at_risk:
+        print(f" - {species}")
+else:
+    print(f"Extinction of {extinct_species} does not directly threaten other species.")
