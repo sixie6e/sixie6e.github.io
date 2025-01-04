@@ -2,6 +2,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider, Button
 import tkinter as tk
+from collections import defaultdict
 
 class Species:
     def __init__(self, name, dependencies=[]):
@@ -42,6 +43,23 @@ def on_slider_change(event):
         
     event.widget.prev_value = event.widget.get()
 
+def build_dependency_graph(filename):
+  graph = defaultdict(list)
+  with open(filename, 'r') as f:
+    for line in f:
+      dependent, source = line.strip().split()
+      graph[source].append(dependent)
+  return graph
+
+def find_direct_dependencies(graph, source_species):
+  return graph[source_species][:3] 
+
+def display_dependencies(source_species, dependencies):
+  print(f"{source_species}")
+  print("Dependencies:")
+  for i, dependency in enumerate(dependencies):
+    print(f"{i+1}. {dependency}")
+      
 window = tk.Tk()
 window.title("Equilibrium")
 canvas = tk.Canvas(window, width=300, height=70)
@@ -73,4 +91,11 @@ if at_risk:
     for species in at_risk:
         print(f" - {species}")
 else:
-    print(f"Extinction of {extinct_species} does not directly threaten other species.")
+    print(f"Extinction of {extinct_species} does not DIRECTLY threaten other species.")
+
+if __name__ == "__main__":
+    dependency_file = "speciesdep.txt"
+    graph = build_dependency_graph(dependency_file)
+    source_species = input("Enter species in the following format: 'Genus species'")
+    dependencies = find_direct_dependencies(graph, source_species)
+    display_dependencies(source_species, dependencies) 
