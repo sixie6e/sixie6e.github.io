@@ -9,6 +9,7 @@ x = num_small_business
 y = num_comm_business
 methane_23 = 1921.53
 methane_25 = 1932.67
+methane_rate = .001114
 co2_23 = 419.7
 co2_25 = 422.5
 c02_rate = .00028
@@ -19,7 +20,7 @@ pollution_levels = np.zeros(years)
 pollution_levels[0] = initial_pollution
 
 for year in range(1, years):
-    pollution_levels[year] = pollution_levels[year - 1] * (1 + (4.3*x + 8.7*y))
+    pollution_levels[year] = pollution_levels[year - 1] * (1 + (x*.043+x) + (y*.087+y))
 
 environmental_impact = pollution_levels / environmental_capacity
 
