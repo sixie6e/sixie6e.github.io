@@ -31,9 +31,9 @@ no2_2024_ppb = 0
 no2_growth_rate = 0
 
 # water
-PFAS_2023_ppb = 0
-PFAS_2024_ppb = 0
-PFAS_growth_rate = 0
+pfas_2023_ppb = 0
+pfas_2024_ppb = 0
+pfas_growth_rate = 0
 
 hg_2023_ppb = 0
 hg_2024_ppb = 0
