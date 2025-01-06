@@ -6,29 +6,47 @@ small_business_growth_rate = 0.043
 commercial_business_growth_rate = 0.087
 
 # air
+ch4_2022_ppb = 1907.53
 ch4_2023_ppb = 1921.53
 ch4_2024_ppb = 1932.67
-ch4_growth_rate = 0.001114
+ch4_growth_rate = [0.73, 0.1114]
 
+c02_2022_ppb = 418.0
 co2_2023_ppb = 419.7
 co2_2024_ppb = 422.5
-co2_growth_rate = 0.00028
-
+co2_growth_rate = [0.41, 0.77]
+ 
 n_2023_ppb = 336.7
 n_2024_ppb = 339.9
-n_growth_rate = 0.00032
+n_growth_rate = [0.95]
 
-voc_2023_ppb = 0
-voc_2024_ppb = 0
-voc_growth_rate = 0
+voc_2022_ppb = 12675.0
+voc_2023_ppb = 12531.0
+voc_growth_rate = -0.144
 
-so2_2023_ppb = 0
-so2_2024_ppb = 0
-so2_growth_rate = 0
+so2_2023_ppb = 100.0
+so2_2024_ppb = 94.0
+so2_growth_rate = -0.06
 
-no2_2023_ppb = 0
-no2_2024_ppb = 0
-no2_growth_rate = 0
+no2_2021_ppb = 53.0
+no2_2022_ppb = 61.0
+no2_2023_ppb = 37.0
+no2_growth_rate = [0.1312, -0.39]
+
+co_2022_MMmt = 2402
+co_2023_MMmt = 2640
+co_2024_MMmt = 2770
+co_growth_rate = [9.02, 4.7]
+
+o3_2022_ppb = 61
+o3_2023_ppb = 84
+o3_2024_ppb = 89
+o3_growth_rate = [27.39, 5.62]
+
+partmat_2022_µgm3  = 31.3
+partmat_2023_µgm3 = 36.2
+partmat_2024_µgm3  = 49.8
+partmat_growth_rate = [13.64, 27.31]
 
 # water
 pfas_2023_ppb = 0
