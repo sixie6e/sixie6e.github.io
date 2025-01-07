@@ -5,7 +5,6 @@ num_commercial_businesses = 5500000
 small_business_growth_rate = 0.043
 commercial_business_growth_rate = 0.087
 
-# air
 ch4_2022_ppb = 1907.53
 ch4_2023_ppb = 1921.53
 ch4_2024_ppb = 1932.67
@@ -48,7 +47,6 @@ partmat_2023_µgm3 = 36.2
 partmat_2024_µgm3  = 49.8
 partmat_growth_rate = [13.64, 27.31]
 
-# water
 pfas_2023_ppb = 0
 pfas_2024_ppb = 0
 pfas_growth_rate = 0
@@ -65,13 +63,37 @@ as_2023_ppb = 0
 as_2024_ppb = 0
 as_growth_rate = 0
 
+pb_2023_ppb = 0
+pb_2024_ppb = 0
+pb_growth_rate = 0
+
 eto_2023_ppb = 0
 eto_2024_ppb = 0
 eto_growth_rate = 0
 
-pb_2023_ppb = 0
-pb_2024_ppb = 0
-pb_growth_rate = 0
+c10h8_2023_ppb = 0
+c10h8_2024_ppb = 0
+c10h8_growth_rate = 0
+
+bap_2023_ppb = 0
+bap_2024_ppb = 0
+bap_growth_rate = 0
+
+tph_2023_ppb = 0
+tph_2024_ppb = 0
+tph_growth_rate = 0
+
+btex_2023_ppb = 0
+btex_2024_ppb = 0
+btex_growth_rate = 0
+
+mtbe_2023_ppb = 0
+mtbe_2024_ppb = 0
+mtbe_growth_rate = 0
+
+tba_2023_ppb = 0
+tba_2024_ppb = 0
+tba_growth_rate = 0
 
 total_business_growth = (
     num_small_businesses * small_business_growth_rate 
@@ -93,6 +115,12 @@ cd_increase = (cd_2024_ppb - cd_2023_ppb) * cd_growth_rate
 as_increase = (as_2024_ppb - as_2023_ppb) * as_growth_rate
 pb_increase = (pb_2024_ppb - pb_2023_ppb) * pb_growth_rate
 eto_increase = (eto_2024_ppb - eto_2023_ppb) * eto_growth_rate
+c10h8_increase = (c10h8_2024_µgm3 - c10h8_2023_µgm3) * c10h8_growth_rate
+bap_increase = (bap_2024_ppb - bap_2023_ppb) * bap_growth_rate
+tph_increase = (tph_2024_ppb - tph_2023_ppb) * tph_growth_rate
+btex_increase = (btex_2024_ppb - btex_2023_ppb) * btex_growth_rate
+mtbe_increase = (mtbe_2024_ppb - mtbe_2023_ppb) * mtbe_growth_rate
+tba_increase = (tba_2024_ppb - tba_2023_ppb) * tba_growth_rate
 
 growth_rates = [
     small_business_growth_rate, 
@@ -100,7 +128,7 @@ growth_rates = [
     total_business_growth 
 ]
 
-pollution_increases = [ch4_increase, co2_increase, n_increase, co_increase, so2_increase, no2_increase, pfas_increase, voc_increase, o3_increase, partmat_increase, hg_increase, cd_increase, as_increase, pb_increase, eto_increase]
+pollution_increases = [ch4_increase, co2_increase, n_increase, co_increase, so2_increase, no2_increase, pfas_increase, voc_increase, o3_increase, partmat_increase, hg_increase, cd_increase, as_increase, pb_increase, eto_increase, c10h8_increase, bap_increase, tph_increase, btex_increase, mtbe_increase, tba_increase]
 
 plt.figure(figsize=(8, 6))
 plt.bar(
@@ -120,7 +148,7 @@ print(f"CO2 Increase: {co2_increase:.4f} ppb")
 print(f"N Increase: {n_increase:.4f} ppb")
 print(f"CO Increase: {co_increase:.4f} MMmt")
 print(f"SO2 Increase: {so2_increase:.4f} ppb")
-print(f"NO2 Increase: {no2_increase:.4f} ppb") 
+print(f"NO2 Increase: {no2_increase:.4f} ppb")
 print(f"PFAS Increase: {pfas_increase:.4f} ppb")
 print(f"VOC Increase: {voc_increase:.4f} ppb")
 print(f"O3 Increase: {o3_increase:.4f} ppb") 
@@ -129,4 +157,9 @@ print(f"Cd Increase: {cd_increase:.4f} ppb")
 print(f"As Increase: {as_increase:.4f} ppb")
 print(f"Pb Increase: {pb_increase:.4f} ppb") 
 print(f"EtO Increase: {eto_increase:.4f} ppb")
-
+print(f"C10H8 Increase: {c10h8_increase:.4f} ppb") 
+print(f"BaP Increase: {bap_increase:.4f} ppb") 
+print(f"TPH Increase: {tph_increase:.4f} ppb")
+print(f"BTEX Increase: {btex_increase:.4f} ppb")
+print(f"MTBE Increase: {mtbe_increase:.4f} ppb") 
+print(f"tBA Increase: {tba_increase:.4f} ppb")
