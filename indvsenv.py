@@ -11,7 +11,7 @@ ch4_2023_ppb = 1921.53
 ch4_2024_ppb = 1932.67
 ch4_growth_rate = [0.73, 0.1114]
 
-c02_2022_ppb = 418.0
+co2_2022_ppb = 418.0
 co2_2023_ppb = 419.7
 co2_2024_ppb = 422.5
 co2_growth_rate = [0.41, 0.77]
@@ -81,6 +81,18 @@ total_business_growth = (
 ch4_increase = (ch4_2024_ppb - ch4_2023_ppb) * ch4_growth_rate
 co2_increase = (co2_2024_ppb - co2_2023_ppb) * co2_growth_rate
 n_increase = (n_2024_ppb - n_2023_ppb) * n_growth_rate
+c0_increase = (c0_2024_MMmt - c0_2023_MMmt) * c0_growth_rate
+so2_increase = (so2_2024_ppb - so2_2023_ppb) * so2_growth_rate
+no2_increase = (no2_2024_ppb - no2_2023_ppb) * no2_growth_rate
+pfas_increase = (pfas_2024_ppb - pfas_2023_ppb) * pfas_growth_rate
+voc_increase = (voc_2024_ppb - voc_2023_ppb) * voc_growth_rate
+o3_increase = (o3_2024_ppb - o3_2023_ppb) * o3_growth_rate
+partmat_increase = (partmat_2024_µgm3 - partmat_2023_µgm3) * partmat_growth_rate
+hg_increase = (hg_2024_ppb - hg_2023_ppb) * hg_growth_rate
+cd_increase = (cd_2024_ppb - cd_2023_ppb) * cd_growth_rate
+as_increase = (as_2024_ppb - as_2023_ppb) * as_growth_rate
+pb_increase = (pb_2024_ppb - pb_2023_ppb) * pb_growth_rate
+eto_increase = (eto_2024_ppb - eto_2023_ppb) * eto_growth_rate
 
 growth_rates = [
     small_business_growth_rate, 
@@ -88,7 +100,7 @@ growth_rates = [
     total_business_growth 
 ]
 
-pollution_increases = [ch4_increase, co2_increase, n_increase]
+pollution_increases = [ch4_increase, co2_increase, n_increase, co_increase, so2_increase, no2_increase, pfas_increase, voc_increase, o3_increase, partmat_increase, hg_increase, cd_increase, as_increase, pb_increase, eto_increase]
 
 plt.figure(figsize=(8, 6))
 plt.bar(
@@ -97,11 +109,24 @@ plt.bar(
     color=['lightblue', 'lightgreen', 'orange']
 )
 plt.xlabel('Business Growth Rate')
-plt.ylabel('Pollution Increase (ppb)')
+plt.ylabel('Pollution Increase') # need to fix to include ppm and µgm3 
 plt.title('Correlation between Business Growth and Pollution Increases') 
 plt.show()
 
 print(f"Total Business Growth: {total_business_growth:.2f}")
-print(f"ch4 Increase: {ch4_increase:.4f} ppb")
+print(f"Particulate Matter Increase: {partmat_increase:.4f} µgm3")
+print(f"CH4 Increase: {ch4_increase:.4f} ppb")
 print(f"CO2 Increase: {co2_increase:.4f} ppb")
-print(f"Nitrogen Increase: {n_increase:.4f} ppb") 
+print(f"N Increase: {n_increase:.4f} ppb")
+print(f"CO Increase: {co_increase:.4f} MMmt")
+print(f"SO2 Increase: {so2_increase:.4f} ppb")
+print(f"NO2 Increase: {no2_increase:.4f} ppb") 
+print(f"PFAS Increase: {pfas_increase:.4f} ppb")
+print(f"VOC Increase: {voc_increase:.4f} ppb")
+print(f"O3 Increase: {o3_increase:.4f} ppb") 
+print(f"Hg Increase: {hg_increase:.4f} ppb") 
+print(f"Cd Increase: {cd_increase:.4f} ppb")
+print(f"As Increase: {as_increase:.4f} ppb")
+print(f"Pb Increase: {pb_increase:.4f} ppb") 
+print(f"EtO Increase: {eto_increase:.4f} ppb")
+
