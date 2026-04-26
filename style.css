@@ -120,7 +120,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-image: url('img/0.png');
+  background-image: url('img/meridion2025-03-04_14-35-30.png');
   background-repeat: no-repeat;
   background-size: cover;
   color: #000000;
@@ -153,7 +153,7 @@ body {
   display: flex;
 }
 
-#animalia-btn, #plantae-btn, #fungi-btn, #bacteria-btn, #chromista-btn, #protista-btn, #archaea-btn, #unknown-btn, #video-btn {
+#animalia-btn, #humans-btn, #life-btn, #plantae-btn, #fungi-btn, #bacteria-btn, #chromista-btn, #protista-btn, #archaea-btn, #unknown-btn, #video-btn {
   padding: 10px 20px;
   background-color: #111111;
   color: white;
@@ -162,7 +162,7 @@ body {
   cursor: pointer;
 }
 
-#animalia-btn:hover, #plantae-btn:hover, #fungi-btn:hover, #bacteria-btn:hover, #chromista-btn:hover, #protista-btn:hover, #archaea-btn:hover, #unknown-btn:hover, #video-btn:hover {
+#animalia-btn:hover, #humans-btn:hover, #life-btn:hover, #plantae-btn:hover, #fungi-btn:hover, #bacteria-btn:hover, #chromista-btn:hover, #protista-btn:hover, #archaea-btn:hover, #unknown-btn:hover, #video-btn:hover {
   background-color: #333333;
 }
 
